@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+<changeSet id="base" author="berilo.queiroz" >
+    <validCheckSum>7:c9bfc7efe6d10c1da5b2139567c61285</validCheckSum>
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="clients"/>
+        </not>
+    </preConditions>
+    <comment>Base de cadastros</comment>
+    <sqlFile path="base.sql" relativeToChangelogFile="true"  encoding="UTF-8" />
+</changeSet>
+
+</databaseChangeLog>

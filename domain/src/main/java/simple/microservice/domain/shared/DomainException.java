@@ -1,0 +1,7 @@
+package simple.microservice.domain.shared;
+
+public class DomainException extends Exception {
+    public DomainException(String msg){
+        super(msg);
+    }
+}
